@@ -105,6 +105,9 @@
   position: relative;
   font-weight: 500;
   z-index: unset;
+  color:whitesmoke;
+  text-decoration: none;
+}
 }
 .frame {
   border-radius: 50px;
