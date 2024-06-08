@@ -99,15 +99,16 @@
   text-align: center;
   font-size: var(--font-size-21xl);
   color: var(--color-midnightblue-200);
+ 
   font-family: var(--font-inter);
 }
+
 .download-cv {
   color:whitesmoke;
   text-decoration: none;
   text-underline-position: none;
 }
 
-}
 .frame {
   border-radius: 50px;
   background-color: var(--color-midnightblue-100);
@@ -837,3 +838,5 @@
     gap: var(--gap-10xl);
   }
 }
+
+
