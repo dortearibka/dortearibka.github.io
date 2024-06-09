@@ -50,3 +50,14 @@ body {
   /* Border radiuses */
   --br-3xs: 10px;
 }
+
+.no-underline {
+  text-decoration: none; /* Menghilangkan underline */
+  color: inherit; /* Mempertahankan warna teks asli */
+}
+
+.no-underline:hover {
+  text-decoration: none; /* Menghilangkan underline saat hover */
+  color: inherit; /* Mempertahankan warna teks asli saat hover */
+}
+
