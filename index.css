@@ -622,10 +622,22 @@
 }
 .dortea-ribka-tadete {
   position: relative;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 500;
   z-index: 1;
 }
+
+.dortea-ribka-tadete a {
+  color: #fff; /* Warna putih */
+  text-decoration: none; /* Menghilangkan underline */
+}
+
+.dortea-ribka-tadete a:hover {
+  color: #ccc; /* Warna saat dihover, ganti sesuai keinginan */
+  text-decoration: underline; /* Menambahkan underline saat dihover, jika diinginkan */
+}
+
+
 .contact-details,
 .frame-parent3,
 .social-media-icons {
