@@ -1,1 +1,482 @@
+:root {
 
+  --borderColor: #6a9c89;
+  --lineColor: #6a9c89;
+  --primaryBackgroundColor: #E9EFEC;
+  --secondaryBackgroundColor: #e9efec;
+  --thirdBackgroundColor: #16423C;
+
+  --primaryIconColor: #6a9c89;
+  --primaryIconColorHover: #16423C;
+
+  --sectionPadding: 2rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: #161616;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End Preparation */
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+.nav a:hover {
+    color:  #6A9C89;
+}
+
+/* Buttons */
+.btn {
+  padding: 1em 1rem;
+  background: #E9EFEC;
+  border: 2px solid #6A9C89;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #6A9C89;
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.pre-title-container {
+    /* margin: 0 auto; */
+    text-align: center;
+  }
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #161616;
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #161616;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layouts */
+.grid-3 {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* --- Logo and Navigation Menu --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: #161616;
+}
+
+/* Navigation Menu */
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #161616;
+}
+
+/* Burger - Save for later on video */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #161616;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+header {
+  background-color: #E9EFEC;
+}
+
+/* Hero Section */
+#hero {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: #6A9C89 !important;
+}
+
+.hero-right img {
+  width: 50%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* about */
+#about {
+  background-color: #6A9C89;
+  padding: var(--sectionPadding);
+}
+
+.about .pre-title {
+  margin: 0 auto;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #E9EFEC;
+  border-radius: 20px;
+ 
+}
+
+.about h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.about-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.about-icon svg {
+  color: #E9EFEC;
+}
+
+.about-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.about-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+/* blog */
+#blogs {
+  padding: var(--sectionPadding);
+  background-color: #E9EFEC;
+}
+
+.blog {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+  border: 1px solid #16423C;
+}
+
+.blog-cover {
+  height: 200px;
+ 
+}
+
+.blog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-info {
+  padding: 2rem 1.5rem;
+}
+
+.blog .pre-title {
+    margin: 0 auto;
+  }
+
+.blog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.blog-title a svg:hover {
+  fill: var(--primaryIconColor);
+}
+
+.blog-title a svg {
+  transition: 0.2s ease-in-out;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.blog-tags div {
+  font-size: 0.9rem;
+  background-color: #6A9C89;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #E9EFEC;
+}
+
+/* gallery */
+#gallerys {
+  padding: var(--sectionPadding);
+  background-color: #6A9C89;
+}
+
+.gallery-grid {
+  display: grid;
+  /* grid-template-columns: 50% 50%; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+  .gallery {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #6A9C89;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+ 
+  
+  .gallery-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .gallery h4 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+
+/* Contact Section */
+#contact {
+  padding: var(--sectionPadding);
+  background-color: #E9EFEC;
+}
+
+.contact .pre-title {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+
+.contact-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contact {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family:Arial, Helvetica, sans-serif;
+  background: var(--secondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #E9EFEC;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #16423C;
+}
+
+/* Contact Section - Right Side */
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.contact-item-icon {
+  background-color: #6A9C89;
+  padding: 0.8rem 1rem;
+  width: 53px;
+  height: 53px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item-icon svg {
+  fill: #E9EFEC;
+}
+
+/* Footer Section */
+footer {
+  padding: 2rem 0;
+  background-color: #16423C;
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #6A9C89;
+}
+
+.footer-icons a:hover svg {
+  fill: #E9EFEC;
+}
