@@ -144,12 +144,11 @@ nav ul {
 .logo {
   display: flex;
   align-items: center;
-  font-weight: 700;
-  font-size: 2rem;
 }
 
-.logo a {
-  color: #161616;
+.logo img {
+   width: auto;
+   height: 50px;
 }
 
 /* Navigation Menu */
